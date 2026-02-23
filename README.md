@@ -10,6 +10,8 @@ querySelector() - Selects first match using CSS selector - returns single elemen
 querySelectorAll() - Selects all matches using CSS selector - returns static NodeList (no auto update).
 
 
+
+
 Question-2.
  How do you create and insert a new element into the DOM?
 isAns: 
@@ -17,11 +19,15 @@ const l = document.createElement("div");
 l.textContent = "Hello World";
 document.body.append(l);
 
+
+
 Question-3.
  What is Event Bubbling? And how does it work?
 isAns:
 Event Bubbling means an event starts from the target element and then moves upward to its parent elements.
 showed: Button - Div - Body - HTML
+
+
 
 Question-4.
  What is Event Delegation in JavaScript? Why is it useful?
@@ -34,6 +40,8 @@ document.querySelector("#parent").addEventListener("click", (e) => {
     console.log("Button clicked");
   }
 });
+
+
 
  Question-5.
   What is the difference between preventDefault() and stopPropagation() methods?
