@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+    <style>
+    .geist-font{
+       font-family: "Geist", sans-serif;
+     }
+     </style>
+
+      <!-- DaisyUI+Tailwind cdn -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <!-- awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- google font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+      
+           
+</head>
+ <body class="bg-[#F8FAFC] py-10 .geist-font">
+
+     
+     <section class="max-w-[1100px] mx-auto px-4">
+        
+        <h1 class="text-3xl font-bold mb-8">Job Application Tracker</h1>
+        
+        <!-- Dashboard -->
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+          <div class="card bg-[#ffffff] hover:shadow-md  cursor-pointer">
+            <div class="card-body text-center">
+              <h2 id="totalCount" class="text-3xl font-bold">0</h2>
+              <p>Total</p>
+            </div>
+          </div>
+        
+          <div class="card bg-[#ffffff] hover:shadow-md cursor-pointer">
+            <div class="card-body text-center">
+              <h2 id="interviewCount" class="text-3xl font-bold text-success">0</h2>
+              <p>Interview</p>
+            </div>
+          </div>
+        
+          <div class="card bg-[#ffffff] hover:shadow-md  cursor-pointer">
+            <div class="card-body text-center">
+              <h2 id="rejectedCount" class="text-3xl font-bold text-error">0</h2>
+              <p>Rejected</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Available Jobs</h2>
+          <h3 id="tabCount" class="text-gray-500">0 jobs</h3>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="flex gap-3 mb-8">
+          <button class="tab-btn btn btn-sm bg-blue-600 text-white border-blue-600" data-tab="all">All</button>
+          <button class="tab-btn btn btn-sm btn-outline btn-success" data-tab="interview">Interview</button>
+          <button class="tab-btn btn btn-sm btn-outline btn-error" data-tab="rejected">Rejected</button>
+        </div>
+        
+        <!-- Jobs -->
+        <div id="jobContainer" class="grid gap-6"></div>
+        
+     
+    </section>
+
+     <script src="./script.js"></script>
+
+</body>
+</html>
